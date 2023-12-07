@@ -24,4 +24,8 @@ class QuizController extends Controller
 
         return view("home", ['quizzes' => $quizzes]);
     }
+
+    public function mySuperMiddleware(Request $request) {
+        return ["name" => $request->input('name')];
+    }
 }
